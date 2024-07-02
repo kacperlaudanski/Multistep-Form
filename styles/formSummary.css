@@ -1,0 +1,90 @@
+.form_summary_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form_summary_calculation {
+    flex-basis: 1;
+    min-height: 50%;
+    background-color: var(--magnolia);
+    padding: 1.5em;
+    border-radius: 10px;
+    margin-top: 2em;
+  }
+  
+  .form_summary_selected_plan {
+    flex-basis: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid var(--light-gray);
+  }
+  
+  .form_summary_plan_details > h4 {
+    color: var(--marine-blue);
+    font-weight: 700;
+  }
+  
+  .form_summary_plan_details > button {
+    width: max-content;
+    margin-top: 0.5em;
+    background: none;
+    border: none;
+    color: var(--cool-gray);
+    border-bottom: 2px solid var(--cool-gray);
+    cursor: pointer;
+    transition: color 0.3s linear;
+  }
+  
+  .form_summary_plan_details > button:hover {
+    color: var(--purplish-blue);
+  }
+  
+  .form_summary_plan_price {
+    color: var(--marine-blue);
+    font-weight: 700;
+  }
+  
+  .form_summary_selected_add-ones {
+    flex-basis: 1;
+    padding-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form_summary_add-one {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .form_summary_add-one_name {
+    color: var(--cool-gray);
+  }
+  
+  .form_summary_add-one_price {
+    color: var(--marine-blue);
+  }
+  
+  .form_summary_total {
+    flex-basis: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+  }
+  
+  .form_summary_total_name {
+    color: var(--cool-gray);
+  }
+  
+  .form_summary_total_price {
+    color: var(--purplish-blue);
+    font-size: 1.3rem;
+    font-weight: 700;
+  }

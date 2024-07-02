@@ -1,0 +1,41 @@
+
+
+.form_plan_option {
+    width:100%; 
+  }
+  
+  .form_plan_option > input[type="radio"] {
+    display: none;
+  }
+  
+  .form_plan_option > input[type="radio"] ~ label {
+    flex: 1 1 0px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    border: 1px solid var(--light-gray);
+    border-radius: 10px;
+    padding: 1em;
+    transition: linear 0.3s;
+  
+  }
+  
+  .form_plan_option > input[type="radio"]:checked ~ label {
+    border-color: var(--purplish-blue);
+    background-color: var(--magnolia);
+  }
+  
+  .form_plan_option > input[type="radio"] ~ label:hover {
+    border-color: var(--purplish-blue);
+  }
+  
+  .form_plan_option_info > h3 {
+    margin: 0.2em 0;
+    color: var(--marine-blue);
+  }
+  
+  .form_plan_option_price {
+    color: var(--cool-gray);
+  }

@@ -1,0 +1,37 @@
+.form_step_buttons {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .form_step_buttons.form_step1_button {
+    justify-content: flex-end;
+  }
+  
+  .form_next_btn {
+    width: 100px;
+    height: 40px;
+    background-color: var(--marine-blue);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: linear 0.3s;
+  }
+  
+  .form_previous_btn {
+    background: none;
+    border: none;
+    color: var(--cool-gray);
+    transition: linear 0.3s;
+  }
+  
+  .form_next_btn:hover {
+    opacity: 0.8;
+  }
+  
+  .form_previous_btn:hover {
+    color: var(--marine-blue);
+  }

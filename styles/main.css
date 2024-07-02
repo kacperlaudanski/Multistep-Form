@@ -1,0 +1,119 @@
+@import './asideComponent.css';
+@import './formBillingToggle.css'; 
+@import './formPlanCheckbox.css'; 
+@import './formButtons.css'; 
+@import './formPickOnes.css';
+@import './formSummary.css'; 
+@import './formInputs.css'; 
+@import './formConfirmation.css';
+@import './mobile.css';
+
+:root {
+  --marine-blue: hsl(213, 96%, 18%);
+  --purplish-blue: hsl(243, 100%, 62%);
+  --pastel-blue: hsl(228, 100%, 84%);
+  --light-blue: hsl(206, 94%, 87%);
+  --strawberry-red: hsl(354, 84%, 57%);
+  --cool-gray: hsl(231, 11%, 63%);
+  --light-gray: hsl(229, 24%, 87%);
+  --magnolia: hsl(217, 100%, 97%);
+  --alabaster: hsl(231, 100%, 99%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  overflow-x: hidden;
+  background-color: var(--magnolia);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+button:disabled {
+  background-color: var(--cool-gray);
+  cursor: default;
+}
+
+button:disabled:hover {
+  opacity: 1;
+}
+
+.main_container {
+  width: 65%;
+  height: 75svh;
+  background-color: var(--white);
+  display: flex;
+  padding: 15px;
+  margin: auto;
+  border-radius: 15px;
+  -webkit-box-shadow: 2px 17px 28px -9px rgba(179, 179, 179, 1);
+  -moz-box-shadow: 2px 17px 28px -9px rgba(179, 179, 179, 1);
+  box-shadow: 2px 17px 28px -9px rgba(179, 179, 179, 1);
+}
+
+.form_container {
+  width: 70%;
+  height: 100%;
+  padding: 3em 5em;
+}
+
+.form_wrapper {
+  height: 100%;
+}
+
+.form_step {
+  display: none;
+}
+
+.form_step-active {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form_step_header {
+  width: 100%;
+  height: 20%;
+}
+
+.form_step_header h1 {
+  color: var(--marine-blue);
+  font-size: 2rem;
+  margin: 5px 0;
+}
+
+.form_step_header small {
+  color: var(--cool-gray);
+  font-size: 0.9rem;
+}
+
+.form_plan_options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.hidden {
+  display: none;
+}

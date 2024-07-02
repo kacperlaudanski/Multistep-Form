@@ -1,0 +1,71 @@
+.form_billing_options {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    background-color: var(--magnolia);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 5em;
+  }
+  
+  /* The switch - the box around the slider */
+  .form_billing_toggle {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    font-weight: 700;
+  }
+  
+  .form_billing_option.active {
+    color: var(--marine-blue);
+  }
+  
+  .form_billing_option {
+    font-weight: 700;
+    color: var(--cool-gray);
+    transition: 0.4s linear;
+  }
+  
+  .form_yearly_discount_badge {
+    color: var(--marine-blue);
+    margin-top: 0.6em;
+    font-size: 0.8rem;
+  }
+  
+  /* Hide default HTML checkbox */
+  .form_billing_toggle input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .form_billing_toggle_slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: var(--marine-blue);
+    border-radius: 50px;
+    transition: all 0.4s linear;
+  }
+  
+  .form_billing_toggle_slider:before {
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 17px;
+    top: 4px;
+    left: 4px;
+    background-color: white;
+    border-radius: 50px;
+    transition: all 0.2s linear;
+  }
+  
+  .form_billing_toggle input:checked + .form_billing_toggle_slider:before {
+    transform: translateX(25px);
+    bottom: 0;
+  }

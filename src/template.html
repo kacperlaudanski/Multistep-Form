@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.png" /> 
+    <script src="./boundle.js" defer></script>
+  </head>
+  <body>
+    <main class="main_container">
+      <aside class="step_container" data-step-menu>
+        <div class="step_item">
+          <div class="step_number" data-step-number>1</div>
+          <div class="step_content">
+            <small>STEP 1</small>
+            <h4>YOUR INFO</h4>
+          </div>
+        </div>
+        <div class="step_item">
+          <div class="step_number" data-step-number>2</div>
+          <div class="step_content">
+            <small>STEP 2</small>
+            <h4>SELECT PLAN</h4>
+          </div>
+        </div>
+        <div class="step_item">
+          <div class="step_number" data-step-number>3</div>
+          <div class="step_content">
+            <small>STEP 3</small>
+            <h4>ADD-ONS</h4>
+          </div>
+        </div>
+        <div class="step_item">
+          <div class="step_number" data-step-number>4</div>
+          <div class="step_content">
+            <small>STEP 4</small>
+            <h4>SUMMARY</h4>
+          </div>
+        </div>
+      </aside>
+      <section class="form_container">
+        <form class="form_wrapper" data-multistep-form>
+          <div class="form_step" data-step>
+            <header class="form_step_header">
+              <h1>Personal info</h1>
+              <small>Please provide your name, email address, and phone
+                number.
+                </small>
+            </header>
+            <div class="form_step_inputs_container">
+              <div class="form_step_input_group">
+                <label>Name</label>
+                <input
+                  required
+                  class="form_step_input"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="John"
+                  data-input-step1
+                />
+                <small class="form_step_error_msg hidden">Invalid value</small>
+              </div>
+              <div class="form_step_input_group">
+                <label>Email Address</label>
+                <input
+                  required
+                  class="form_step_input"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="e.g. john@gmail.com"
+                  data-input-step1
+                />
+                <small class="form_step_error_msg hidden">Invalid value</small>
+              </div>
+              <div class="form_step_input_group">
+                <label>Phone Number</label>
+                <input
+                  required
+                  class="form_step_input"
+                  type="number"
+                  name="phone-number"
+                  id="phone-number"
+                  placeholder="e.g. +1 234 567 890"
+                  data-input-step1
+                />
+                <small class="form_step_error_msg hidden">Invalid value</small>
+              </div>
+            </div>
+            <div class="form_step_buttons form_step1_button">
+              <button type="button" class="form_next_btn" data-next data-next-step1>
+                Next Step
+              </button>
+            </div>
+          </div>
+          <div class="form_step" data-step>
+            <header class="form_step_header">
+              <h1>Select your plan</h1>
+              <small>You have the option of monthly or yearly billing.</small>
+            </header>
+            <div class="form_plan_options">
+              <div class="form_plan_option">
+                <input
+                  type="radio"
+                  name="plan-option"
+                  id="plan-option-arcade"
+                  class="plan_option"
+                  data-monthly-price="9"
+                  data-yearly-price="90"
+                  data-name="Arcade"
+                />
+                <label for="plan-option-arcade">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                  >
+                    <g fill="none" fill-rule="evenodd">
+                      <circle cx="20" cy="20" r="20" fill="#FFAF7E" />
+                      <path
+                        fill="#FFF"
+                        fill-rule="nonzero"
+                        d="M24.995 18.005h-3.998v5.998h-2v-5.998H15a1 1 0 0 0-1 1V29a1 1 0 0 0 1 1h9.995a1 1 0 0 0 1-1v-9.995a1 1 0 0 0-1-1Zm-5.997 8.996h-2v-1.999h2v2Zm2-11.175a2.999 2.999 0 1 0-2 0v2.18h2v-2.18Z"
+                      />
+                    </g>
+                  </svg>
+                  <div class="form_plan_option_info">
+                    <h3>Arcade</h3>
+                    <p class="form_plan_option_price">$9/mo</p>
+                    <p class="form_yearly_discount_badge hidden">
+                      2 months free
+                    </p>
+                  </div>
+                </label>
+              </div>
+              <div class="form_plan_option">
+                <input
+                  type="radio"
+                  class="plan_option"
+                  name="plan-option"
+                  id="plan-option-advanced"
+                  data-monthly-price="12"
+                  data-yearly-price="120"
+                  data-name="Advanced"
+                  checked
+                />
+                <label for="plan-option-advanced">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                  >
+                    <g fill="none" fill-rule="evenodd">
+                      <circle cx="20" cy="20" r="20" fill="#F9818E" />
+                      <path
+                        fill="#FFF"
+                        fill-rule="nonzero"
+                        d="M25.057 15H14.944C12.212 15 10 17.03 10 19.885c0 2.857 2.212 4.936 4.944 4.936h10.113c2.733 0 4.943-2.08 4.943-4.936S27.79 15 25.057 15ZM17.5 20.388c0 .12-.108.237-.234.237h-1.552v1.569c0 .126-.138.217-.259.217H14.5c-.118 0-.213-.086-.213-.203v-1.583h-1.569c-.126 0-.217-.139-.217-.26v-.956c0-.117.086-.213.202-.213h1.584v-1.554c0-.125.082-.231.203-.231h.989c.12 0 .236.108.236.234v1.551h1.555c.125 0 .231.083.231.204v.988Zm5.347.393a.862.862 0 0 1-.869-.855c0-.472.39-.856.869-.856.481 0 .87.384.87.856 0 .471-.389.855-.87.855Zm1.9 1.866a.86.86 0 0 1-.87-.852.86.86 0 0 1 .87-.855c.48 0 .87.38.87.855a.86.86 0 0 1-.87.852Zm0-3.736a.862.862 0 0 1-.87-.854c0-.472.39-.856.87-.856s.87.384.87.856a.862.862 0 0 1-.87.854Zm1.899 1.87a.862.862 0 0 1-.868-.855c0-.472.389-.856.868-.856s.868.384.868.856a.862.862 0 0 1-.868.855Z"
+                      />
+                    </g>
+                  </svg>
+                  <div class="form_plan_option_info">
+                    <h3>Advanced</h3>
+                    <p class="form_plan_option_price">$12/mo</p>
+                    <p class="form_yearly_discount_badge hidden">
+                      2 months free
+                    </p>
+                  </div>
+                </label>
+              </div>
+              <div class="form_plan_option">
+                <input
+                  type="radio"
+                  name="plan-option"
+                  id="plan-option-pro"
+                  data-monthly-price="15"
+                  data-yearly-price="150"
+                  data-name="Pro"
+                  class="plan_option"
+                />
+                <label for="plan-option-pro">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                  >
+                    <g fill="none" fill-rule="evenodd">
+                      <circle cx="20" cy="20" r="20" fill="#483EFF" />
+                      <path
+                        fill="#FFF"
+                        fill-rule="nonzero"
+                        d="M26.666 13H13.334A3.333 3.333 0 0 0 10 16.333v7.193a3.447 3.447 0 0 0 2.14 3.24c1.238.5 2.656.182 3.56-.8L18.52 23h2.96l2.82 2.966a3.2 3.2 0 0 0 3.56.8 3.447 3.447 0 0 0 2.14-3.24v-7.193A3.333 3.333 0 0 0 26.666 13Zm-9.333 6H16v1.333a.667.667 0 0 1-1.333 0V19h-1.333a.667.667 0 0 1 0-1.334h1.333v-1.333a.667.667 0 1 1 1.333 0v1.333h1.333a.667.667 0 1 1 0 1.334Zm7.333 2a2.667 2.667 0 1 1 0-5.333 2.667 2.667 0 0 1 0 5.333ZM26 18.333a1.333 1.333 0 1 1-2.667 0 1.333 1.333 0 0 1 2.667 0Z"
+                      />
+                    </g>
+                  </svg>
+                  <div class="form_plan_option_info">
+                    <h3>Pro</h3>
+                    <p class="form_plan_option_price">$15/mo</p>
+                    <p class="form_yearly_discount_badge hidden">
+                      2 months free
+                    </p>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="form_billing_options">
+              <p class="form_billing_option active" data-monthly-billing>
+                Monthly
+              </p>
+              <label class="form_billing_toggle">
+                <input
+                  type="checkbox"
+                  id="billing-toggle"
+                  name="billing-toggle"
+                />
+                <span class="form_billing_toggle_slider"></span>
+              </label>
+              <p class="form_billing_option" data-yearly-billing>Yearly</p>
+            </div>
+            <div class="form_step_buttons">
+              <button class="form_previous_btn" type="button" data-previous>
+                Go back
+              </button>
+              <button class="form_next_btn" type="button" data-next>
+                Next Step
+              </button>
+            </div>
+          </div>
+          <div class="form_step" data-step>
+            <header class="form_step_header">
+              <h1>Pick add-ons</h1>
+              <small>Add-ons help enhance your gaming expoerience.</small>
+            </header>
+            <div class="form_add-ons_container">
+              <div class="form_add-one_element">
+                <label for="online-service">
+                  <div class="form_add-one_input">
+                    <input
+                      class="pick-one-checkbox"
+                      type="checkbox"
+                      name="online-service"
+                      id="online-service"
+                      data-name="Online Service"
+                      data-monthly-price="1"
+                      data-yearly-price="10"
+                    />
+                    <div class="form_add-one_details">
+                      <h4>Online service</h4>
+                      <small>Access to multiplayer games</small>
+                    </div>
+                  </div>
+                  <div class="form_add-one_price" data-add-one-price>
+                    +$1/mo
+                  </div>
+                </label>
+              </div>
+              <div class="form_add-one_element">
+                <label for="larger-storage">
+                  <div class="form_add-one_input">
+                    <input
+                      class="pick-one-checkbox"
+                      type="checkbox"
+                      name="larger-storage"
+                      id="larger-storage"
+                      data-name="Local Storage"
+                      data-monthly-price="2"
+                      data-yearly-price="20"
+                    />
+                    <div class="form_add-one_details">
+                      <h4>Local storage</h4>
+                      <small>Extra 1TB of cloud save</small>
+                    </div>
+                  </div>
+                  <div class="form_add-one_price" data-add-one-price>
+                    +$2/mo
+                  </div>
+                </label>
+              </div>
+              <div class="form_add-one_element">
+                <label for="customizable-profile">
+                  <div class="form_add-one_input">
+                    <input
+                      class="pick-one-checkbox"
+                      type="checkbox"
+                      name="customizable-profile"
+                      id="customizable-profile"
+                      data-name="Customizable Profile"
+                      data-monthly-price="2"
+                      data-yearly-price="20"
+                    />
+                    <div class="form_add-one_details">
+                      <h4>Customizable profile</h4>
+                      <small>Custom theme on your profile</small>
+                    </div>
+                  </div>
+                  <div class="form_add-one_price" data-add-one-price>
+                    +$2/mo
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="form_step_buttons">
+              <button class="form_previous_btn" type="button" data-previous>
+                Go back
+              </button>
+              <button class="form_next_btn" type="button" data-next>
+                Next Step
+              </button>
+            </div>
+          </div>
+          <div class="form_step" data-step>
+            <header class="form_step_header">
+              <h1>Finishing up</h1>
+              <small>Double-check everything looks OK before confirming.</small>
+            </header>
+            <div class="form_summary_container">
+              <div class="form_summary_calculation">
+                <div class="form_summary_selected_plan">
+                  <div class="form_summary_plan_details">
+                    <h4 class="form_summary_name">Arcade (Monthly)</h4>
+                    <button id="change-plan-btn">Change</button>
+                  </div>
+                  <div class="form_summary_plan_price">$9/mo</div>
+                </div>
+                <ul class="form_summary_selected_add-ones"></ul>
+              </div>
+              <div class="form_summary_total">
+                <div class="form_summary_total_name">Total (per <span class="billing_snippet">month</span>)</div>
+                <div class="form_summary_total_price">+$12/mo</div>
+              </div>
+            </div>
+            <div class="form_step_buttons">
+              <button class="form_previous_btn" type="button" data-previous>
+                Go back
+              </button>
+              <button class="form_next_btn" type="button" data-next>
+                Confirm
+              </button>
+            </div>
+          </div>
+          <div class="form_step" data-step>
+            <div class="form_confirmed_container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="80"
+                height="80"
+                viewBox="0 0 80 80"
+              >
+                <g fill="none">
+                  <circle cx="40" cy="40" r="40" fill="#F9818E" />
+                  <path
+                    fill="#E96170"
+                    d="M48.464 79.167c.768-.15 1.53-.321 2.288-.515a40.04 40.04 0 0 0 3.794-1.266 40.043 40.043 0 0 0 3.657-1.63 40.046 40.046 0 0 0 12.463-9.898A40.063 40.063 0 0 0 78.3 51.89c.338-1.117.627-2.249.867-3.391L55.374 24.698a21.6 21.6 0 0 0-15.332-6.365 21.629 21.629 0 0 0-15.344 6.365c-8.486 8.489-8.486 22.205 0 30.694l23.766 23.775Z"
+                  />
+                  <path
+                    fill="#FFF"
+                    d="M40.003 18.333a21.58 21.58 0 0 1 15.31 6.351c8.471 8.471 8.471 22.158 0 30.63-8.47 8.47-22.156 8.47-30.627 0-8.47-8.472-8.47-22.159 0-30.63a21.594 21.594 0 0 1 15.317-6.35Zm9.865 15c-.316.028-.622.15-.872.344l-12.168 9.13-5.641-5.642c-1.224-1.275-3.63 1.132-2.356 2.356l6.663 6.663c.56.56 1.539.63 2.173.156l13.326-9.995c1.122-.816.43-2.993-.956-3.013a1.666 1.666 0 0 0-.17 0Z"
+                  />
+                </g>
+              </svg>
+              <h1>Thank you!</h1>
+              <p>
+                Thanks for confirming your subscription! We hope you have <br />
+                fun using our platform. If you ever need support, please feel
+                <br />
+                free to email us at support@loremgaming.com.
+              </p>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

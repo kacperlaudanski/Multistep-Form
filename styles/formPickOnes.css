@@ -1,0 +1,53 @@
+.form_add-ons_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 3em 0;
+  }
+  
+  .form_add-one_element {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: flex-start;
+    position: relative;
+    border: 1px solid var(--light-gray);
+    border-radius: 10px;
+    padding: 1.2em;
+  }
+  
+  .form_add-one_element > label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .form_add-one_element:has(input[type="checkbox"]:checked) {
+    border: 1px solid var(--purplish-blue);
+    background-color: var(--magnolia);
+  }
+  
+  .form_add-one_input {
+    display: flex;
+  }
+  
+  .form_add-one_input > input[type="checkbox"] {
+    margin-right: 1.2em;
+  }
+  
+  .form_add-one_details h4 {
+    color: var(--marine-blue);
+  }
+  .form_add-one_details small {
+    color: var(--cool-gray);
+  }
+  .form_add-one_price {
+    color: var(--purplish-blue);
+  }

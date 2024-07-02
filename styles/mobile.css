@@ -1,0 +1,89 @@
+@media screen and (width <= 1280px) {
+    .main_container {
+      width: 100%;
+      height: auto;
+      padding: 0;
+      flex-direction: column;
+      box-shadow: none;
+      margin-top: 10em;
+    }
+    .step_container {
+      width: 100%;
+      height: 200px;
+      padding: 0 4em;
+      border-radius: 0;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      background-image: url(../images/bg-sidebar-mobile.svg);
+      background-size: cover;
+    }
+  
+    .step_item {
+      justify-content: center;
+    }
+  
+    .step_content {
+      display: none;
+    }
+  
+    .form_container {
+      width: 100%;
+      height: auto;
+      padding: 1.5em 1.5em 7em;
+      margin: 0;
+      position: static;
+      z-index: 1000;
+    }
+  
+    .form_step_buttons {
+      width: 100%;
+      padding: 0 1.5em;
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%);
+      background-color: var(--white);
+      -webkit-box-shadow: 0px 18px 34px 13px rgba(179, 179, 179, 1);
+      -moz-box-shadow: 0px 18px 34px 13px rgba(179, 179, 179, 1);
+      box-shadow: 0px 18px 34px 13px rgba(179, 179, 179, 1);
+    }
+  
+    .form_plan_options {
+      flex-direction: column;
+      margin-top: 3em;
+    }
+  
+    .form_plan_option > input[type="radio"] ~ label{
+      width: 100%; 
+      height:100px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  
+    .form_plan_option_info{
+      margin-left: 1em;
+    }
+  
+    .form_billing_options {
+      margin-top: 2em;
+      padding:0 3em; 
+    }
+  }
+  
+  @media screen and (min-width:769px) and (max-width: 1280px){
+    .step_container{
+      padding: 0 14em; 
+    }
+    .form_container{
+      padding: 6em;
+    }
+    .form_billing_options {
+      margin-top: 2em;
+      padding:0 10em; 
+    }
+  } 
